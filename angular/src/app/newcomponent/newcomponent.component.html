@@ -1,0 +1,30 @@
+<h1 [hidden] = "po">{{ po }}</h1>
+<h2 id="e">quyền</h2>
+<h4 *ngIf = po>hiện</h4>
+xl sự kiện <button type="button" (click)="xlsk()">ẩn hiện</button>
+<br />
+<input type="text" placeholder="nhập vào đây để xem kết quả" [(ngModel)] = "name"><br />
+style.color: <h3 [style.color] = " name.length % 2 === 0 ? 'black' : 'blue' ">{{ name }}</h3>
+ngstyle + pipe: <h3 [ngStyle] = "bien">{{ name | uppercase }}</h3>
+<h2>tìm kiếm</h2><br />
+<select [(ngModel)]="chon">
+    
+    <option value="o">--all--</option>
+
+    <option value="a">a</option>
+    
+    <option value="b">b</option>
+    
+    <option value="c">c</option>
+</select>
+<ul>
+    <div *ngFor = "let obj of arr">
+    <li *ngIf="kt(obj)">
+        <p>{{ 'hello '+obj }}</p>
+        <button type="button" (click)="xoa(obj)">xóa</button>
+    </li>
+    </div>
+</ul>
+<h2>thêm mới</h2>
+<input type="text" [(ngModel)] = "newr">
+<button type="button" (click)="xlskthem()">thêm</button>

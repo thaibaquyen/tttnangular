@@ -1,0 +1,16 @@
+<p>{{ ten }}</p>
+<h2>{{ valu }}</h2>
+<button (click)=" valu = valu + 1 ">tăng 1 đơn vị</button>
+<p>-----------------------------------</p>
+<div>
+    <form  #dlform = "ngForm">
+        tk <input type="text" name="tk" [(ngModel)]="tk"><br />
+        mk <input type="text" name="mk" [(ngModel)]="mk">
+     <p>Sở thíck</p>   
+<p><input type="checkbox" [(ngModel)]="ckbox1" name="bóng đâ">bóng đá</p>
+
+<p><input type="checkbox" [(ngModel)]="ckbox2" name="cầu lông">cầu lông</p>
+        <input type="submit" value="ok">
+    </form>
+    <p>{{ dlform.value | json }}</p>
+</div>
